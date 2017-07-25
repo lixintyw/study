@@ -1,0 +1,12 @@
+main:menu.o gameMenu.o sign_in_up.o gamev0.2.o
+	gcc menu.o gameMenu.o sign_in_up.o gamev0.2.o -o main
+menu.o:menu.c
+	gcc -c menu.c -o menu.o
+gameMenu.o:gameMenu.c
+	gcc -c gameMenu.c -o gameMenu.o
+sign_in_up.o:sign_in_up.c
+	gcc -c sign_in_up.c -o sign_in_up.o
+gamev2.0.o:gamev0.2.c
+	gcc -c gamev0.2.c -o gamev0.2.o
+clean:
+	rm -rvf main *.o
